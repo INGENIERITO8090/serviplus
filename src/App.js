@@ -7,14 +7,10 @@ function App() {
     <Fragment>
       <Router>
         <Routes>
-         <Route path="/" exact element={<Login/>}/> 
-         <Route  path="/crearcuenta" exact element={<CrearCuenta/>}     
-          ></Route>
-  
+         <Route path="/" exact element={<Login/>}/>
+         <Route  path="/crearcuenta" exact element={<CrearCuenta/>} />
         </Routes>
-
       </Router>
-
     </Fragment>
   );
 }

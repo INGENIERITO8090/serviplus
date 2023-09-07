@@ -1,6 +1,44 @@
-import React from "react";
+import React , {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
+
+
+
 const CrearCuenta = () => {
+
+const [ usuario,setUsuario] =useState({
+ 
+ nombre:'',
+ email:'',
+ password:'',
+ confirmar:''
+
+ 
+});
+
+const {nombre,email,password,confirmar } = usuario;
+
+
+const onChange = (e)  =>{
+setUsuario({
+       usuario,
+       [e.target.name]:e.target.value
+})
+}
+const onSubmit =(e) => {
+    e.preventDefault();
+
+}
+
+
+
+
+
+
+
+
+
+
+
     return ( 
         <div class="hold-transition login-page">
         <div className="login-box">
@@ -11,7 +49,7 @@ const CrearCuenta = () => {
             <div className="card">
                 <div className="card-body login-card-body">
                     <p className="login-box-msg">Bienvenido  ingrece su credenciales</p>
-                    <form action="../../index3.html" method="post">
+                    <form onSubmit={onSubmit}>
                     <div className="input-group mb-3">
                             <input type="text" 
                             className="form-control" 
